@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		741F72342BF14E9D00F96D1B /* Mobius_Demo_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741F72332BF14E9D00F96D1B /* Mobius_Demo_SwiftUIApp.swift */; };
-		741F72362BF14E9D00F96D1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741F72352BF14E9D00F96D1B /* ContentView.swift */; };
+		741F72362BF14E9D00F96D1B /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741F72352BF14E9D00F96D1B /* OrdersView.swift */; };
 		741F72382BF14E9E00F96D1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 741F72372BF14E9E00F96D1B /* Assets.xcassets */; };
 		741F723B2BF14E9E00F96D1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 741F723A2BF14E9E00F96D1B /* Preview Assets.xcassets */; };
 		74A9BB022BF152E7001180F2 /* SplitComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9BB012BF152E7001180F2 /* SplitComponent.swift */; };
@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		741F72302BF14E9D00F96D1B /* Mobius-Demo-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobius-Demo-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		741F72332BF14E9D00F96D1B /* Mobius_Demo_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobius_Demo_SwiftUIApp.swift; sourceTree = "<group>"; };
-		741F72352BF14E9D00F96D1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		741F72352BF14E9D00F96D1B /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
 		741F72372BF14E9E00F96D1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		741F723A2BF14E9E00F96D1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		74A9BB012BF152E7001180F2 /* SplitComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitComponent.swift; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 				74A9BB032BF1549F001180F2 /* Extensions */,
 				74A9BB002BF152D8001180F2 /* Components */,
 				741F72332BF14E9D00F96D1B /* Mobius_Demo_SwiftUIApp.swift */,
-				741F72352BF14E9D00F96D1B /* ContentView.swift */,
+				741F72352BF14E9D00F96D1B /* OrdersView.swift */,
 				741F72372BF14E9E00F96D1B /* Assets.xcassets */,
 				741F72392BF14E9E00F96D1B /* Preview Content */,
 			);
@@ -182,7 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74A9BB0A2BF156A7001180F2 /* OrderComponent.swift in Sources */,
-				741F72362BF14E9D00F96D1B /* ContentView.swift in Sources */,
+				741F72362BF14E9D00F96D1B /* OrdersView.swift in Sources */,
 				74A9BB022BF152E7001180F2 /* SplitComponent.swift in Sources */,
 				741F72342BF14E9D00F96D1B /* Mobius_Demo_SwiftUIApp.swift in Sources */,
 				74A9BB052BF154B1001180F2 /* Color+Extension.swift in Sources */,

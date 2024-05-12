@@ -5,7 +5,7 @@ struct Mobius_Demo_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                OrdersView()
                     .navigationTitle("Мои заказы")
                     .navigationBarTitleDisplayMode(.inline)
             }

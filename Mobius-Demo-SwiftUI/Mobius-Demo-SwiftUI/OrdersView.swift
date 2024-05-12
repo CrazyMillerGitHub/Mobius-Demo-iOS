@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ContentView: View {
+struct OrdersView: View {
 
     private let tabs: [String] = ["Маркет", "Магазины и рестораны"]
     @State private var favoriteColor: String = ""
@@ -24,5 +24,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    OrdersView()
 }

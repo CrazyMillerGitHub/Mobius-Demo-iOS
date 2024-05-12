@@ -11,3 +11,7 @@ struct OrderComponent: View {
         }
     }
 }
+
+#Preview {
+    OrderComponent()
+}
