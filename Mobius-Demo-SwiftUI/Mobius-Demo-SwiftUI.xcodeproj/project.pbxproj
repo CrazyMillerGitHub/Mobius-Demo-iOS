@@ -11,6 +11,10 @@
 		741F72362BF14E9D00F96D1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741F72352BF14E9D00F96D1B /* ContentView.swift */; };
 		741F72382BF14E9E00F96D1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 741F72372BF14E9E00F96D1B /* Assets.xcassets */; };
 		741F723B2BF14E9E00F96D1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 741F723A2BF14E9E00F96D1B /* Preview Assets.xcassets */; };
+		74A9BB022BF152E7001180F2 /* SplitComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9BB012BF152E7001180F2 /* SplitComponent.swift */; };
+		74A9BB052BF154B1001180F2 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9BB042BF154B1001180F2 /* Color+Extension.swift */; };
+		74A9BB082BF1560C001180F2 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9BB072BF1560C001180F2 /* Loadable.swift */; };
+		74A9BB0A2BF156A7001180F2 /* OrderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9BB092BF156A7001180F2 /* OrderComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		741F72352BF14E9D00F96D1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		741F72372BF14E9E00F96D1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		741F723A2BF14E9E00F96D1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		74A9BB012BF152E7001180F2 /* SplitComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitComponent.swift; sourceTree = "<group>"; };
+		74A9BB042BF154B1001180F2 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		74A9BB072BF1560C001180F2 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		74A9BB092BF156A7001180F2 /* OrderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,10 @@
 		741F72322BF14E9D00F96D1B /* Mobius-Demo-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				74A9BB0D2BF156DC001180F2 /* Service */,
+				74A9BB062BF15603001180F2 /* Utils */,
+				74A9BB032BF1549F001180F2 /* Extensions */,
+				74A9BB002BF152D8001180F2 /* Components */,
 				741F72332BF14E9D00F96D1B /* Mobius_Demo_SwiftUIApp.swift */,
 				741F72352BF14E9D00F96D1B /* ContentView.swift */,
 				741F72372BF14E9E00F96D1B /* Assets.xcassets */,
@@ -65,6 +77,38 @@
 				741F723A2BF14E9E00F96D1B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		74A9BB002BF152D8001180F2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				74A9BB012BF152E7001180F2 /* SplitComponent.swift */,
+				74A9BB092BF156A7001180F2 /* OrderComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		74A9BB032BF1549F001180F2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				74A9BB042BF154B1001180F2 /* Color+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		74A9BB062BF15603001180F2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				74A9BB072BF1560C001180F2 /* Loadable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		74A9BB0D2BF156DC001180F2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74A9BB0A2BF156A7001180F2 /* OrderComponent.swift in Sources */,
 				741F72362BF14E9D00F96D1B /* ContentView.swift in Sources */,
+				74A9BB022BF152E7001180F2 /* SplitComponent.swift in Sources */,
 				741F72342BF14E9D00F96D1B /* Mobius_Demo_SwiftUIApp.swift in Sources */,
+				74A9BB052BF154B1001180F2 /* Color+Extension.swift in Sources */,
+				74A9BB082BF1560C001180F2 /* Loadable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

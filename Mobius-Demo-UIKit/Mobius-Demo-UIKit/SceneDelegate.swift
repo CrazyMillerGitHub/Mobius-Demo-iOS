@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  Mobius-Demo-UIKit
-//
-//  Created by Mikhail Borisov on 12.05.2024.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

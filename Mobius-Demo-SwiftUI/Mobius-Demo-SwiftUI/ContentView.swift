@@ -1,21 +1,25 @@
-//
-//  ContentView.swift
-//  Mobius-Demo-SwiftUI
-//
-//  Created by Mikhail Borisov on 12.05.2024.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+
+    private let tabs: [String] = ["Маркет", "Магазины и рестораны"]
+    @State private var favoriteColor: String = ""
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ScrollView {
+            LazyVStack {
+                Picker("", selection: $favoriteColor) {
+                    ForEach(tabs, id: \.self) {
+                        Text($0)
+                    }
+                }
+                .pickerStyle(.segmented)
+                SplitComponent(data: .init())
+                ForEach(1...10, id: \.self) { value in
+                    OrderComponent()
+                }
+            }
         }
-        .padding()
     }
 }
 
