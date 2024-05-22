@@ -8,13 +8,11 @@ struct SplitComponentModel {
 
 struct SplitComponent: View {
 
-    var data: Loadable<SplitComponentModel>
-
     var body: some View {
         ZStack {
             Button(
                 action: {
-                    data.model?.action()
+                    // TODO: - Add logic
                 }, label: {
                     Color.lightGray
                 }
@@ -23,8 +21,4 @@ struct SplitComponent: View {
                 .opacity(0.5)
         }
     }
-}
-
-#Preview {
-    SplitComponent(data: .init())
 }

@@ -2,24 +2,44 @@ import SwiftUI
 
 struct OrdersView: View {
 
-    private let tabs: [String] = ["Маркет", "Магазины и рестораны"]
-    @State private var favoriteColor: String = ""
+    @State private var selectedSegment: Segment = .market
+    private let segments: [Segment] = [.market, .restaurants]
+    @StateObject private var viewModel = OrdersViewModel(dataService: DataService())
 
     var body: some View {
         ScrollView {
-            LazyVStack {
-                Picker("", selection: $favoriteColor) {
-                    ForEach(tabs, id: \.self) {
-                        Text($0)
+            VStack {
+                ChipsComponent(selectedSegment: $selectedSegment, segments: segments)
+                    .onChange(of: selectedSegment) {
+                        viewModel.refresh(by: selectedSegment)
+                    }
+                SplitComponent()
+                if viewModel.isLoading {
+                    ForEach(0..<5) { _ in
+                        PlaceholderView()
+                    }
+                } else {
+                    switch viewModel.items {
+                    case .market(let items):
+                        ForEach(items, id: \.self) { item in
+                            OrderComponent()
+                                .cornerRadius(Constants.radius)
+                        }
+                    case .restaraunts(let items):
+                        ForEach(items, id: \.self) { item in
+                            OrderComponent()
+                                .cornerRadius(Constants.radius)
+                        }
                     }
                 }
-                .pickerStyle(.segmented)
-                SplitComponent(data: .init())
-                ForEach(1...10, id: \.self) { value in
-                    OrderComponent()
-                }
-            }
+            }.animation(.easeInOut, value: viewModel.isLoading)
         }
+    }
+}
+
+extension OrdersView {
+    private enum Constants {
+        static let radius: CGFloat = 15
     }
 }
 
