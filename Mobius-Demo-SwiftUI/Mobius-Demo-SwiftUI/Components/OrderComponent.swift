@@ -2,16 +2,18 @@ import SwiftUI
 
 struct OrderComponent: View {
 
+    let item: Item
+
     var body: some View {
         ZStack {
-            Color.lightGray
-                .frame(height: 140)
+            Color.white
+                .frame(height: 250)
             Text("Order")
                 .opacity(0.5)
         }
-    }
+}
 }
 
 #Preview {
-    OrderComponent()
+    OrderComponent(item: .init(title: ""))
 }

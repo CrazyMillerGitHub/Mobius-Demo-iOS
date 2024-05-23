@@ -21,19 +21,19 @@ struct OrdersView: View {
                 } else {
                     switch viewModel.items {
                     case .market(let items):
-                        ForEach(items, id: \.self) { item in
-                            OrderComponent()
+                        ForEach(items, id: \.id) { item in
+                            OrderComponent(item: item)
                                 .cornerRadius(Constants.radius)
                         }
                     case .restaraunts(let items):
-                        ForEach(items, id: \.self) { item in
-                            OrderComponent()
+                        ForEach(items, id: \.id) { item in
+                            OrderComponent(item: item)
                                 .cornerRadius(Constants.radius)
                         }
                     }
                 }
             }.animation(.easeInOut, value: viewModel.isLoading)
-        }
+        }.background(Color.secondaryApp)
     }
 }
 

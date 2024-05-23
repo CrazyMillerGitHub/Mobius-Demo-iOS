@@ -14,9 +14,9 @@ struct SplitComponent: View {
                 action: {
                     // TODO: - Add logic
                 }, label: {
-                    Color.lightGray
+                    Color.secondaryApp
                 }
-            ).frame(height: 56)
+            ).frame(height: 40)
             Text("Split")
                 .opacity(0.5)
         }

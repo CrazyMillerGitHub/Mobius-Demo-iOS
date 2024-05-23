@@ -6,8 +6,8 @@ struct Item: Identifiable {
 }
 
 enum Items {
-    case market([String])
-    case restaraunts([String])
+    case market([Item])
+    case restaraunts([Item])
 }
 
 final class DataService {

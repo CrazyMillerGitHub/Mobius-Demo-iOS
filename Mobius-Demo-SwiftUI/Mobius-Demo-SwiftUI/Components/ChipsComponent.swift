@@ -21,7 +21,8 @@ struct ChipsComponent: View {
             }
             Spacer()
         }
-        .padding(.horizontal, Constants.horizontalStackPadding)
+        .padding(.init(top: 5, leading: Constants.horizontalStackPadding, bottom: 5, trailing: Constants.horizontalStackPadding))
+        .background(.white)
     }
 }
 
@@ -29,8 +30,8 @@ extension ChipsComponent {
     struct Constants {
         static let horizontalPadding: CGFloat = 16
         static let verticalPadding: CGFloat = 8
-        static let selectedBackgroundColor: Color = .blue
-        static let deselectedBackgroundColor: Color = Color.gray.opacity(0.2)
+        static let selectedBackgroundColor: Color = .chipsSelected
+        static let deselectedBackgroundColor: Color = .chips
         static let selectedForegroundColor: Color = .white
         static let deselectedForegroundColor: Color = .black
         static let cornerRadius: CGFloat = 20

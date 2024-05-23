@@ -15,7 +15,7 @@ final class OrdersViewModel: ObservableObject {
     func fetchData() {
         isLoading = true
         dataService.fetchMarketItems { [weak self] items in
-            self?.items = .market([""])
+            self?.items = .market(items)
             self?.isLoading = false
         }
     }
@@ -25,12 +25,12 @@ final class OrdersViewModel: ObservableObject {
         switch segment {
         case .market:
             dataService.fetchMarketItems { [weak self] items in
-                self?.items = .market([])
+                self?.items = .market(items)
                 self?.isLoading = false
             }
         case .restaurants:
             dataService.fetchRestaurantsItems { [weak self] items in
-                self?.items = .restaraunts([])
+                self?.items = .restaraunts(items)
                 self?.isLoading = false
             }
         }
