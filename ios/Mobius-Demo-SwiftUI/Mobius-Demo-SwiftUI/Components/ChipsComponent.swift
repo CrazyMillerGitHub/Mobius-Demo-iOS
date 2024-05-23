@@ -21,7 +21,14 @@ struct ChipsComponent: View {
             }
             Spacer()
         }
-        .padding(.init(top: 5, leading: Constants.horizontalStackPadding, bottom: 5, trailing: Constants.horizontalStackPadding))
+        .padding(
+            .init(
+                top: Constants.verticalStackPadding,
+                leading: Constants.horizontalStackPadding,
+                bottom: Constants.verticalStackPadding,
+                trailing: Constants.horizontalStackPadding
+            )
+        )
         .background(.white)
     }
 }
@@ -38,5 +45,6 @@ extension ChipsComponent {
         static let font: Font = .caption
         static let animation: Animation = .easeInOut(duration: 0.3)
         static let horizontalStackPadding: CGFloat = 16
+        static let verticalStackPadding: CGFloat = 5
     }
 }
