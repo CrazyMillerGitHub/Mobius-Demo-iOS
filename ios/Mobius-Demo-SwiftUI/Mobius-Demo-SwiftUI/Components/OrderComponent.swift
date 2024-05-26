@@ -1,8 +1,9 @@
 import SwiftUI
+import Mobius_Common
 
-struct OrderComponent: View {
+struct MarketOrderComponent: View {
 
-    let item: Item
+    let item: MarketOrder
 
     var body: some View {
         ZStack {
@@ -11,9 +12,19 @@ struct OrderComponent: View {
             Text("Order")
                 .opacity(0.5)
         }
-}
+    }
 }
 
-#Preview {
-    OrderComponent(item: .init(title: ""))
+struct RestaurantOrderComponent: View {
+
+    let item: RestaurantOrder
+
+    var body: some View {
+        ZStack {
+            Color.white
+                .frame(height: 250)
+            Text("Order")
+                .opacity(0.5)
+        }
+    }
 }

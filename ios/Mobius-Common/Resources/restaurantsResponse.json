@@ -1,0 +1,82 @@
+{
+  "orders": [
+    {
+      "order_id": "123456",
+      "delivery_date": "2023-11-05",
+      "source": "Яндекс Еда",
+      "items": [
+        {
+          "item_id": "ITM78910",
+          "name": "Бургер",
+          "quantity": 1,
+          "price_per_unit": 450,
+          "currency": "RUB",
+          "image_url": "images/burger.jpg"
+        },
+        {
+          "item_id": "ITM78911",
+          "name": "Картофель фри",
+          "quantity": 1,
+          "price_per_unit": 230,
+          "currency": "RUB",
+          "image_url": "images/fries.jpg"
+        }
+      ],
+      "total_price": 680,
+      "currency": "RUB",
+      "current_status": "delivered"
+    },
+    {
+      "order_id": "123457",
+      "delivery_date": "2023-11-07",
+      "source": "Яндекс Лавка",
+      "items": [
+        {
+          "item_id": "ITM78912",
+          "name": "Маргарита Пицца",
+          "quantity": 1,
+          "price_per_unit": 980,
+          "currency": "RUB",
+          "image_url": "images/margherita_pizza.jpg"
+        },
+        {
+          "item_id": "ITM78913",
+          "name": "Цезарь салат",
+          "quantity": 1,
+          "price_per_unit": 680,
+          "currency": "RUB",
+          "image_url": "images/caesar_salad.jpg"
+        },
+        {
+          "item_id": "ITM78914",
+          "name": "Тирамису",
+          "quantity": 1,
+          "price_per_unit": 530,
+          "currency": "RUB",
+          "image_url": "images/tiramisu.jpg"
+        }
+      ],
+      "total_price": 2190,
+      "currency": "RUB",
+      "current_status": "cooking"
+    },
+    {
+      "order_id": "123458",
+      "delivery_date": "2023-11-10",
+      "source": "Яндекс Еда",
+      "items": [
+        {
+          "item_id": "ITM78915",
+          "name": "Том Ям Суп",
+          "quantity": 2,
+          "price_per_unit": 820,
+          "currency": "RUB",
+          "image_url": "images/tom_yum_soup.jpg"
+        }
+      ],
+      "total_price": 1640,
+      "currency": "RUB",
+      "current_status": "delivering"
+    }
+  ]
+}

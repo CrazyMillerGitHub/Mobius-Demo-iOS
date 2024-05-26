@@ -1,0 +1,79 @@
+{
+  "orders": [
+    {
+      "order_id": "123456",
+      "delivery_date": "2023-11-05",
+      "items": [
+        {
+          "item_id": "ITM78910",
+          "name": "Беспроводная мышь",
+          "quantity": 1,
+          "price_per_unit": 25.99,
+          "currency": "USD",
+          "image_url": "images/wireless_mouse.jpg"
+        },
+        {
+          "item_id": "ITM78911",
+          "name": "Клавиатура",
+          "quantity": 1,
+          "price_per_unit": 49.99,
+          "currency": "USD",
+          "image_url": "images/keyboard.jpg"
+        }
+      ],
+      "total_price": 75.98,
+      "currency": "USD",
+      "current_status": "delivered"
+    },
+    {
+      "order_id": "123457",
+      "delivery_date": "2023-11-07",
+      "items": [
+        {
+          "item_id": "ITM78912",
+          "name": "Подставка для ноутбука",
+          "quantity": 1,
+          "price_per_unit": 39.99,
+          "currency": "USD",
+          "image_url": "images/laptop_stand.jpg"
+        },
+        {
+          "item_id": "ITM78913",
+          "name": "USB-C Хаб",
+          "quantity": 1,
+          "price_per_unit": 29.99,
+          "currency": "USD",
+          "image_url": "images/usb_c_hub.jpg"
+        },
+        {
+          "item_id": "ITM78914",
+          "name": "Внешний жесткий диск",
+          "quantity": 1,
+          "price_per_unit": 119.99,
+          "currency": "USD",
+          "image_url": "images/external_hard_drive.jpg"
+        }
+      ],
+      "total_price": 189.97,
+      "currency": "USD",
+      "current_status": "not_delivered"
+    },
+    {
+      "order_id": "123458",
+      "delivery_date": "2023-11-10",
+      "items": [
+        {
+          "item_id": "ITM78915",
+          "name": "Монитор",
+          "quantity": 2,
+          "price_per_unit": 199.99,
+          "currency": "USD",
+          "image_url": "images/monitor.jpg"
+        }
+      ],
+      "total_price": 399.98,
+      "currency": "USD",
+      "current_status": "not_delivered"
+    }
+  ]
+}

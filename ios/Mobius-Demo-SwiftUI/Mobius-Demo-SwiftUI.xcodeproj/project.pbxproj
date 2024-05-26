@@ -14,12 +14,27 @@
 		74A9BB022BF152E7001180F2 /* SplitComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9BB012BF152E7001180F2 /* SplitComponent.swift */; };
 		74A9BB052BF154B1001180F2 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9BB042BF154B1001180F2 /* Color+Extension.swift */; };
 		74A9BB0A2BF156A7001180F2 /* OrderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9BB092BF156A7001180F2 /* OrderComponent.swift */; };
+		9BB954732C03AAF50087815C /* Mobius_Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB954722C03AAF50087815C /* Mobius_Common.framework */; };
+		9BB954742C03AAF50087815C /* Mobius_Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB954722C03AAF50087815C /* Mobius_Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9BF2F4772BFE9A5300143BBD /* ChipsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2F4762BFE9A5300143BBD /* ChipsComponent.swift */; };
-		9BF2F4792BFE9BFA00143BBD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2F4782BFE9BFA00143BBD /* Service.swift */; };
 		9BF2F47B2BFE9C3900143BBD /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2F47A2BFE9C3900143BBD /* OrdersViewModel.swift */; };
 		9BF2F47D2BFE9C5E00143BBD /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2F47C2BFE9C5E00143BBD /* PlaceholderView.swift */; };
 		9BF2F47F2BFEA1E500143BBD /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2F47E2BFEA1E500143BBD /* Segment.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9BB954752C03AAF60087815C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9BB954742C03AAF50087815C /* Mobius_Common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		741F72302BF14E9D00F96D1B /* Mobius-Demo-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobius-Demo-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,8 +45,8 @@
 		74A9BB012BF152E7001180F2 /* SplitComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitComponent.swift; sourceTree = "<group>"; };
 		74A9BB042BF154B1001180F2 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		74A9BB092BF156A7001180F2 /* OrderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderComponent.swift; sourceTree = "<group>"; };
+		9BB954722C03AAF50087815C /* Mobius_Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Mobius_Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF2F4762BFE9A5300143BBD /* ChipsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipsComponent.swift; sourceTree = "<group>"; };
-		9BF2F4782BFE9BFA00143BBD /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		9BF2F47A2BFE9C3900143BBD /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
 		9BF2F47C2BFE9C5E00143BBD /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		9BF2F47E2BFEA1E500143BBD /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
@@ -42,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BB954732C03AAF50087815C /* Mobius_Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +70,7 @@
 				741F72332BF14E9D00F96D1B /* Mobius_Demo_SwiftUIApp.swift */,
 				741F72322BF14E9D00F96D1B /* Mobius-Demo-SwiftUI */,
 				741F72312BF14E9D00F96D1B /* Products */,
+				9BB954712C03AAF50087815C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,7 +85,6 @@
 		741F72322BF14E9D00F96D1B /* Mobius-Demo-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				9BF2F4782BFE9BFA00143BBD /* Service.swift */,
 				74A9BB062BF15603001180F2 /* Utils */,
 				74A9BB032BF1549F001180F2 /* Extensions */,
 				74A9BB002BF152D8001180F2 /* Components */,
@@ -115,6 +131,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		9BB954712C03AAF50087815C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BB954722C03AAF50087815C /* Mobius_Common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,6 +149,7 @@
 				741F722C2BF14E9D00F96D1B /* Sources */,
 				741F722D2BF14E9D00F96D1B /* Frameworks */,
 				741F722E2BF14E9D00F96D1B /* Resources */,
+				9BB954752C03AAF60087815C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,7 +212,6 @@
 			files = (
 				74A9BB0A2BF156A7001180F2 /* OrderComponent.swift in Sources */,
 				9BF2F47F2BFEA1E500143BBD /* Segment.swift in Sources */,
-				9BF2F4792BFE9BFA00143BBD /* Service.swift in Sources */,
 				741F72362BF14E9D00F96D1B /* OrdersView.swift in Sources */,
 				74A9BB022BF152E7001180F2 /* SplitComponent.swift in Sources */,
 				741F72342BF14E9D00F96D1B /* Mobius_Demo_SwiftUIApp.swift in Sources */,
@@ -334,8 +358,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,8 +386,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

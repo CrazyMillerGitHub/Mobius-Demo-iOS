@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Mobius-Common/Mobius-Common.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Mobius-Demo-UIKit/Mobius-Demo-UIKit.xcodeproj">
    </FileRef>
    <FileRef

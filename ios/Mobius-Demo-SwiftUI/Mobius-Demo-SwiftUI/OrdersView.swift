@@ -1,10 +1,11 @@
 import SwiftUI
+import Mobius_Common
 
 struct OrdersView: View {
 
     @State private var selectedSegment: Segment = .market
     private let segments: [Segment] = [.market, .restaurants]
-    @StateObject private var viewModel = OrdersViewModel(dataService: DataService())
+    @StateObject private var viewModel = OrdersViewModel(dataService: NetworkService())
 
     var body: some View {
         ScrollView {
@@ -21,13 +22,13 @@ struct OrdersView: View {
                 } else {
                     switch viewModel.items {
                     case .market(let items):
-                        ForEach(items, id: \.id) { item in
-                            OrderComponent(item: item)
+                        ForEach(items, id: \.orderID) { item in
+                            MarketOrderComponent(item: item)
                                 .cornerRadius(Constants.radius)
                         }
                     case .restaraunts(let items):
-                        ForEach(items, id: \.id) { item in
-                            OrderComponent(item: item)
+                        ForEach(items, id: \.orderID) { item in
+                            RestaurantOrderComponent(item: item)
                                 .cornerRadius(Constants.radius)
                         }
                     }

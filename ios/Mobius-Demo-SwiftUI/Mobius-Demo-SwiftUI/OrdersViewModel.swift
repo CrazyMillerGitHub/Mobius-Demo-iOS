@@ -1,21 +1,26 @@
 import Foundation
 import Combine
+import Mobius_Common
 
 final class OrdersViewModel: ObservableObject {
     @Published var items: Items = .market([])
     @Published var isLoading: Bool = true
 
-    private var dataService: DataService
+    private var dataService: NetworkService
 
-    init(dataService: DataService) {
+    init(dataService: NetworkService) {
         self.dataService = dataService
         fetchData()
     }
 
     func fetchData() {
         isLoading = true
-        dataService.fetchMarketItems { [weak self] items in
-            self?.items = .market(items)
+        dataService.fetchMarketItems { [weak self] result in
+            self?.items = if case .success(let items) = result {
+                .market(items)
+            } else {
+                .market([])
+            }
             self?.isLoading = false
         }
     }
@@ -24,13 +29,21 @@ final class OrdersViewModel: ObservableObject {
         isLoading = true
         switch segment {
         case .market:
-            dataService.fetchMarketItems { [weak self] items in
-                self?.items = .market(items)
+            dataService.fetchMarketItems { [weak self] result in
+                self?.items = if case .success(let items) = result {
+                    .market(items)
+                } else {
+                    .market([])
+                }
                 self?.isLoading = false
             }
         case .restaurants:
-            dataService.fetchRestaurantsItems { [weak self] items in
-                self?.items = .restaraunts(items)
+            dataService.fetchRestaurantsItems { [weak self] result in
+                self?.items = if case .success(let items) = result {
+                    .restaraunts(items)
+                } else {
+                    .restaraunts([])
+                }
                 self?.isLoading = false
             }
         }
