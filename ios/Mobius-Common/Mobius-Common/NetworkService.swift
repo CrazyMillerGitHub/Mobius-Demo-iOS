@@ -1,9 +1,17 @@
 import Foundation
-import Mobius_Common
 
 public enum Items {
     case market([MarketOrder])
     case restaraunts([RestaurantOrder])
+
+    public var count: Int {
+        switch self {
+        case .market(let items):
+            return items.count
+        case .restaraunts(let items):
+            return items.count
+        }
+    }
 }
 
 enum ServiceError: Error {

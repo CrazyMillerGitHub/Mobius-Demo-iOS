@@ -19,7 +19,6 @@
 		9BF2F4772BFE9A5300143BBD /* ChipsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2F4762BFE9A5300143BBD /* ChipsComponent.swift */; };
 		9BF2F47B2BFE9C3900143BBD /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2F47A2BFE9C3900143BBD /* OrdersViewModel.swift */; };
 		9BF2F47D2BFE9C5E00143BBD /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2F47C2BFE9C5E00143BBD /* PlaceholderView.swift */; };
-		9BF2F47F2BFEA1E500143BBD /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2F47E2BFEA1E500143BBD /* Segment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,7 +48,6 @@
 		9BF2F4762BFE9A5300143BBD /* ChipsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipsComponent.swift; sourceTree = "<group>"; };
 		9BF2F47A2BFE9C3900143BBD /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
 		9BF2F47C2BFE9C5E00143BBD /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
-		9BF2F47E2BFEA1E500143BBD /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				9BF2F47C2BFE9C5E00143BBD /* PlaceholderView.swift */,
-				9BF2F47E2BFEA1E500143BBD /* Segment.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -211,7 +208,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				74A9BB0A2BF156A7001180F2 /* OrderComponent.swift in Sources */,
-				9BF2F47F2BFEA1E500143BBD /* Segment.swift in Sources */,
 				741F72362BF14E9D00F96D1B /* OrdersView.swift in Sources */,
 				74A9BB022BF152E7001180F2 /* SplitComponent.swift in Sources */,
 				741F72342BF14E9D00F96D1B /* Mobius_Demo_SwiftUIApp.swift in Sources */,

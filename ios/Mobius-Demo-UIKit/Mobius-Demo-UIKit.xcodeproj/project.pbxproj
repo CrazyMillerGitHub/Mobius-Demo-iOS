@@ -14,7 +14,26 @@
 		741F72202BF14E7700F96D1B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 741F721F2BF14E7700F96D1B /* Base */; };
 		74A9BB102BF15C78001180F2 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9BB0F2BF15C78001180F2 /* OrderCell.swift */; };
 		74A9BB122BF15C7E001180F2 /* SplitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9BB112BF15C7E001180F2 /* SplitCell.swift */; };
+		9BD22D8A2C03D6C9007FCD96 /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD22D892C03D6C9007FCD96 /* OrdersViewModel.swift */; };
+		9BD22D8D2C03D74A007FCD96 /* ChipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD22D8C2C03D74A007FCD96 /* ChipsView.swift */; };
+		9BD22D8F2C03D7E1007FCD96 /* ChipsComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD22D8E2C03D7E1007FCD96 /* ChipsComponentView.swift */; };
+		9BD22D942C03DE47007FCD96 /* Mobius_Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD22D932C03DE47007FCD96 /* Mobius_Common.framework */; };
+		9BD22D952C03DE47007FCD96 /* Mobius_Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD22D932C03DE47007FCD96 /* Mobius_Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9BD22D962C03DE47007FCD96 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9BD22D952C03DE47007FCD96 /* Mobius_Common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		741F72102BF14E7600F96D1B /* Mobius-Demo-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobius-Demo-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +45,10 @@
 		741F72212BF14E7700F96D1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74A9BB0F2BF15C78001180F2 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		74A9BB112BF15C7E001180F2 /* SplitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitCell.swift; sourceTree = "<group>"; };
+		9BD22D892C03D6C9007FCD96 /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
+		9BD22D8C2C03D74A007FCD96 /* ChipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipsView.swift; sourceTree = "<group>"; };
+		9BD22D8E2C03D7E1007FCD96 /* ChipsComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipsComponentView.swift; sourceTree = "<group>"; };
+		9BD22D932C03DE47007FCD96 /* Mobius_Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Mobius_Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD22D942C03DE47007FCD96 /* Mobius_Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +68,7 @@
 			children = (
 				741F72122BF14E7600F96D1B /* Mobius-Demo-UIKit */,
 				741F72112BF14E7600F96D1B /* Products */,
+				9BD22D922C03DE47007FCD96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,9 +83,11 @@
 		741F72122BF14E7600F96D1B /* Mobius-Demo-UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				9BD22D8B2C03D743007FCD96 /* UI */,
 				74A9BB0E2BF15C69001180F2 /* Cells */,
 				741F72132BF14E7600F96D1B /* AppDelegate.swift */,
 				741F72152BF14E7600F96D1B /* SceneDelegate.swift */,
+				9BD22D892C03D6C9007FCD96 /* OrdersViewModel.swift */,
 				741F72172BF14E7600F96D1B /* OrdersViewController.swift */,
 				741F721C2BF14E7700F96D1B /* Assets.xcassets */,
 				741F721E2BF14E7700F96D1B /* LaunchScreen.storyboard */,
@@ -78,6 +105,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		9BD22D8B2C03D743007FCD96 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9BD22D8C2C03D74A007FCD96 /* ChipsView.swift */,
+				9BD22D8E2C03D7E1007FCD96 /* ChipsComponentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9BD22D922C03DE47007FCD96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BD22D932C03DE47007FCD96 /* Mobius_Common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,6 +132,7 @@
 				741F720C2BF14E7600F96D1B /* Sources */,
 				741F720D2BF14E7600F96D1B /* Frameworks */,
 				741F720E2BF14E7600F96D1B /* Resources */,
+				9BD22D962C03DE47007FCD96 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,11 +193,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD22D8F2C03D7E1007FCD96 /* ChipsComponentView.swift in Sources */,
 				741F72182BF14E7600F96D1B /* OrdersViewController.swift in Sources */,
 				741F72142BF14E7600F96D1B /* AppDelegate.swift in Sources */,
 				74A9BB102BF15C78001180F2 /* OrderCell.swift in Sources */,
+				9BD22D8D2C03D74A007FCD96 /* ChipsView.swift in Sources */,
 				741F72162BF14E7600F96D1B /* SceneDelegate.swift in Sources */,
 				74A9BB122BF15C7E001180F2 /* SplitCell.swift in Sources */,
+				9BD22D8A2C03D6C9007FCD96 /* OrdersViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

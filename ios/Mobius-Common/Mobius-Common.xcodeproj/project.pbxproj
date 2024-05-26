@@ -14,6 +14,7 @@
 		9BD22D862C03AD07007FCD96 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD22D832C03AD07007FCD96 /* Item.swift */; };
 		9BD22D872C03AD07007FCD96 /* RestaurantOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD22D842C03AD07007FCD96 /* RestaurantOrder.swift */; };
 		9BD22D882C03AD07007FCD96 /* MarketOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD22D852C03AD07007FCD96 /* MarketOrder.swift */; };
+		9BD22D912C03DDF9007FCD96 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD22D902C03DDF9007FCD96 /* Segment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		9BD22D832C03AD07007FCD96 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		9BD22D842C03AD07007FCD96 /* RestaurantOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantOrder.swift; sourceTree = "<group>"; };
 		9BD22D852C03AD07007FCD96 /* MarketOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketOrder.swift; sourceTree = "<group>"; };
+		9BD22D902C03DDF9007FCD96 /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				9BB954762C03ABD20087815C /* NetworkService.swift */,
 				9BB954612C03AA6F0087815C /* Model */,
 				9BB954572C03A9F80087815C /* Mobius_Common.h */,
+				9BD22D902C03DDF9007FCD96 /* Segment.swift */,
 			);
 			path = "Mobius-Common";
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BD22D882C03AD07007FCD96 /* MarketOrder.swift in Sources */,
+				9BD22D912C03DDF9007FCD96 /* Segment.swift in Sources */,
 				9BD22D872C03AD07007FCD96 /* RestaurantOrder.swift in Sources */,
 				9BD22D862C03AD07007FCD96 /* Item.swift in Sources */,
 				9BB954772C03ABD20087815C /* NetworkService.swift in Sources */,
