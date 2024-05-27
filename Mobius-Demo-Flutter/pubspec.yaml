@@ -1,0 +1,44 @@
+name: mobius_demo_flutter
+description: "Yandex demo flutter project for Mobius 2024."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Annotation
+  meta: ^1.12.0
+
+  # Icons
+  cupertino_icons: ^1.0.6
+
+  # Util
+  provider: ^6.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/market_response.json
+    - assets/restaurants_response.json
+    - assets/burger.jpg
+    - assets/caesar_salad.jpeg
+    - assets/external_hard_drive.jpg
+    - assets/fries.jpg
+    - assets/keyboard.jpeg
+    - assets/laptop_stand.jpeg
+    - assets/margherita-pizza.jpg
+    - assets/monitor.jpeg
+    - assets/tiramisu.jpeg
+    - assets/tom_yum_soup.jpg
+    - assets/usb_c_hub.png
+    - assets/wireless_mouse.jpg
