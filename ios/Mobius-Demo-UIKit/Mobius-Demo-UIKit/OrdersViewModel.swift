@@ -19,6 +19,7 @@ final class OrdersViewModel {
     }
 
     func refresh(by segment: Segment) {
+        orders = .market([])
         switch segment {
         case .market:
             networkService.fetchMarketItems { [weak self] result in

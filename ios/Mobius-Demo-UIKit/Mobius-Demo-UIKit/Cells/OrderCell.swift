@@ -1,17 +1,38 @@
 import UIKit
 
-final class OrderCell: UITableViewCell {
+final class OrderCell: UICollectionViewCell {
 
     static let identifier = String(describing: OrderCell.self)
 
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    private let descr: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.text = "Order"
+        label.textAlignment = .center
+        label.layer.opacity = 0.5
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
 
-        backgroundColor = .gray.withAlphaComponent(0.6)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
     }
 
     required init?(coder: NSCoder) {
         preconditionFailure("init(coder:) has not been implemented")
         return nil
+    }
+
+    private func setupView() {
+        layer.cornerRadius = 15
+        layer.masksToBounds = false
+        backgroundColor = .white
+
+        contentView.addSubview(descr)
+
+        NSLayoutConstraint.activate([
+            descr.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            descr.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        ])
     }
 }

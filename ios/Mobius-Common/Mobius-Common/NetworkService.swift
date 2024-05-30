@@ -81,6 +81,13 @@ final public class NetworkService {
         self.init(api: MockAPI())
     }
 
+    public func fetchImage(
+        for path: String,
+        completion: @escaping (Result<Data, Error>) -> Void
+    ) {
+        debugPrint("add logic")
+    }
+
     public func fetchMarketItems(completion: @escaping (Result<[MarketOrder], Error>) -> Void) {
         api.fetch(request: MarketRequest()) { res in
             switch res {

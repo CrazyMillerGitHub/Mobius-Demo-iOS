@@ -2,14 +2,14 @@ import UIKit
 import Combine
 import Mobius_Common
 
-final class OrdersViewController: UITableViewController {
+final class OrdersViewController: UICollectionViewController {
 
     private let viewModel: OrdersViewModel
     private var cancellables = Set<AnyCancellable>()
 
     init(viewModel: OrdersViewModel = OrdersViewModel()) {
         self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
+        super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }
 
     required init?(coder: NSCoder) {
@@ -18,20 +18,36 @@ final class OrdersViewController: UITableViewController {
     }
 
     private lazy var chipsComponent: UIView = {
-        return ChipsComponentView(
+        let chips = ChipsComponentView(
             segments: Segment.allCases,
             initialSelectedSegment: Segment.market
         ) { [weak self] segment in
             guard let segment else { return }
             self?.viewModel.refresh(by: segment)
         }
+        chips.translatesAutoresizingMaskIntoConstraints = false
+        return chips
     }()
 
     override func loadView() {
         super.loadView()
         registerCells()
 
-        view.backgroundColor = .systemBackground
+        view.addSubview(chipsComponent)
+
+        NSLayoutConstraint.activate([
+            chipsComponent.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            chipsComponent.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            chipsComponent.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        ])
+
+        collectionView.contentInset = .init(
+            top: 30,
+            left: 0,
+            bottom: 0,
+            right: 0
+        )
+        collectionView.backgroundColor = .secondaryApp
     }
 
     override func viewDidLoad() {
@@ -42,45 +58,63 @@ final class OrdersViewController: UITableViewController {
         viewModel.fetchData()
     }
 
-    override func tableView(
-        _ tableView: UITableView,
-        viewForHeaderInSection section: Int
-    ) -> UIView? {
-        guard section < 1 else {
-            preconditionFailure("Not supported")
-        }
-        return chipsComponent
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard section > 0 else { return 1 }
         return viewModel.orders.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard
-            let cell = tableView.dequeueReusableCell(withIdentifier: OrderCell.identifier, for: indexPath) as? OrderCell
-        else {
-            return UITableViewCell()
+    override func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
+        switch indexPath.section {
+        case 0:
+            guard let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: SplitCell.identifier,
+                for: indexPath
+            ) as? SplitCell else {
+                return UICollectionViewCell()
+            }
+            return cell
+        case 1:
+            guard let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: OrderCell.identifier,
+                for: indexPath
+            ) as? OrderCell else {
+                return UICollectionViewCell()
+            }
+            return cell
+        case _:
+            return UICollectionViewCell()
         }
-        return cell
     }
+}
 
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        120
+extension OrdersViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return .init(
+            width: view.bounds.width,
+            height: indexPath.section == 0 ? 74 : 200
+        )
     }
 }
 
 extension OrdersViewController {
     private func registerCells() {
-        tableView.register(OrderCell.self, forCellReuseIdentifier: OrderCell.identifier)
-        tableView.register(SplitCell.self, forCellReuseIdentifier: SplitCell.identifier)
+        collectionView.register(OrderCell.self, forCellWithReuseIdentifier: OrderCell.identifier)
+        collectionView.register(SplitCell.self, forCellWithReuseIdentifier: SplitCell.identifier)
     }
 
     private func bindViewModel() {
         viewModel.$orders
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
-                self?.tableView.reloadData()
+                self?.collectionView.reloadData()
             }
             .store(in: &cancellables)
     }

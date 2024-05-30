@@ -65,7 +65,6 @@
 		741F72272BF14E9D00F96D1B = {
 			isa = PBXGroup;
 			children = (
-				741F72332BF14E9D00F96D1B /* Mobius_Demo_SwiftUIApp.swift */,
 				741F72322BF14E9D00F96D1B /* Mobius-Demo-SwiftUI */,
 				741F72312BF14E9D00F96D1B /* Products */,
 				9BB954712C03AAF50087815C /* Frameworks */,
@@ -83,6 +82,7 @@
 		741F72322BF14E9D00F96D1B /* Mobius-Demo-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				741F72332BF14E9D00F96D1B /* Mobius_Demo_SwiftUIApp.swift */,
 				74A9BB062BF15603001180F2 /* Utils */,
 				74A9BB032BF1549F001180F2 /* Extensions */,
 				74A9BB002BF152D8001180F2 /* Components */,

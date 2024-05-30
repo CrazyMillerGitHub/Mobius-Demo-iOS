@@ -20,7 +20,8 @@ final class ChipView: UIButton {
     }
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        preconditionFailure("init(coder:) has not been implemented")
+        return nil
     }
 
     private func configureAppearance() {
@@ -47,12 +48,12 @@ final class ChipView: UIButton {
 private extension ChipView {
     private struct Constants {
         static let horizontalPadding: CGFloat = 16
-        static let verticalPadding: CGFloat = 12
-        static let selectedBackgroundColor: UIColor = .systemBlue
-        static let deselectedBackgroundColor: UIColor = .lightGray
+        static let verticalPadding: CGFloat = 7
+        static let selectedBackgroundColor: UIColor = .chipsSelected
+        static let deselectedBackgroundColor: UIColor = .chips
         static let selectedForegroundColor: UIColor = .white
         static let deselectedForegroundColor: UIColor = .black
-        static let cornerRadius: CGFloat = 20
-        static let font: UIFont = .systemFont(ofSize: 14, weight: .medium)
+        static let cornerRadius: CGFloat = 15
+        static let font: UIFont = .preferredFont(forTextStyle: .caption1)
     }
 }

@@ -6,8 +6,10 @@ public enum Segment: Int, CaseIterable, Identifiable {
 
     public var title: String {
         switch self {
-        case .market: return "Маркет"
-        case .restaurants: return "Магазины и рестораны"
+        case .market: 
+            return "Маркет"
+        case .restaurants: 
+            return "Магазины и рестораны"
         }
     }
 }
