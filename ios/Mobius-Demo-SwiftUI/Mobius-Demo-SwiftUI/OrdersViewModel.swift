@@ -16,10 +16,10 @@ final class OrdersViewModel: ObservableObject {
     func fetchData() {
         isLoading = true
         dataService.fetchMarketItems { [weak self] result in
-            self?.items = if case .success(let items) = result {
-                .market(items)
+            if case .success(let items) = result {
+                self?.items = .market(items)
             } else {
-                .market([])
+                self?.items = .market([])
             }
             self?.isLoading = false
         }
