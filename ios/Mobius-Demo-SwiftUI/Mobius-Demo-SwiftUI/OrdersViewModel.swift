@@ -30,19 +30,19 @@ final class OrdersViewModel: ObservableObject {
         switch segment {
         case .market:
             dataService.fetchMarketItems { [weak self] result in
-                self?.items = if case .success(let items) = result {
-                    .market(items)
+                if case .success(let items) = result {
+                    self?.items = .market(items)
                 } else {
-                    .market([])
+                    self?.items = .market([])
                 }
                 self?.isLoading = false
             }
         case .restaurants:
             dataService.fetchRestaurantsItems { [weak self] result in
-                self?.items = if case .success(let items) = result {
-                    .restaraunts(items)
+                if case .success(let items) = result {
+                    self?.items = .restaraunts(items)
                 } else {
-                    .restaraunts([])
+                    self?.items = .restaraunts([])
                 }
                 self?.isLoading = false
             }
