@@ -39,4 +39,3 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
