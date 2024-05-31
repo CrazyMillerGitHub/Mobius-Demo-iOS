@@ -11,7 +11,7 @@ struct OrdersView: View {
         ScrollView {
             VStack {
                 ChipsComponent(selectedSegment: $selectedSegment, segments: segments)
-                    .onChange(of: selectedSegment) {
+                    .onChange(of: selectedSegment) { _ in
                         viewModel.refresh(by: selectedSegment)
                     }
                 SplitComponent()
@@ -42,8 +42,4 @@ extension OrdersView {
     private enum Constants {
         static let radius: CGFloat = 15
     }
-}
-
-#Preview {
-    OrdersView()
 }

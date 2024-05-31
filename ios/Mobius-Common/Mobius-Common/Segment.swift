@@ -1,4 +1,4 @@
-public enum Segment: Int, CaseIterable, Identifiable {
+public enum Segment: Int, CaseIterable, Identifiable, Equatable {
     public var id: Int { rawValue }
 
     case market
