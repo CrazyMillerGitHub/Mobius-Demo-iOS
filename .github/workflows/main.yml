@@ -1,0 +1,16 @@
+name: github-pages
+
+on:
+  push:
+    branches: [ flutter-develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v1
+      - uses: bluefireteam/flutter-gh-pages@v7
+        with:
+          workingDir: Mobius-Demo-Flutter
