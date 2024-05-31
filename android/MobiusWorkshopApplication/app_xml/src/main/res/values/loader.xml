@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Loader">
+        <attr name="loaderType" format="enum">
+            <enum name="spinner" value="0" />
+            <enum name="fader" value="1" />
+        </attr>
+        <attr name="loaderColor" format="color" />
+        <attr name="loaderDuration" format="integer" />
+        <attr name="loaderFadingDuration" format="integer" />
+        <attr name="loaderDrawable" format="reference" />
+    </declare-styleable>
+
+</resources>
