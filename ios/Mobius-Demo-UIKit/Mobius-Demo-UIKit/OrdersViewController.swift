@@ -47,7 +47,7 @@ final class OrdersViewController: UICollectionViewController {
             bottom: 0,
             right: 0
         )
-        collectionView.backgroundColor = .secondaryApp
+        collectionView.backgroundColor = UIColor(named: "secondaryAppColor")!
     }
 
     override func viewDidLoad() {

@@ -38,8 +38,8 @@ extension ChipsComponent {
     struct Constants {
         static let horizontalPadding: CGFloat = 16
         static let verticalPadding: CGFloat = 8
-        static let selectedBackgroundColor: Color = .chipsSelected
-        static let deselectedBackgroundColor: Color = .chips
+        static let selectedBackgroundColor: Color = Color("chipsSelectedColor", bundle: .main)
+        static let deselectedBackgroundColor: Color = Color("chipsColor", bundle: .main)
         static let selectedForegroundColor: Color = .white
         static let deselectedForegroundColor: Color = .black
         static let cornerRadius: CGFloat = 20

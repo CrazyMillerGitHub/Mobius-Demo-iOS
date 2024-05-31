@@ -14,7 +14,7 @@ struct SplitComponent: View {
                 action: {
                     // TODO: - Add logic
                 }, label: {
-                    Color.secondaryApp
+                    Color("secondaryAppColor", bundle: .main)
                 }
             ).frame(height: 40)
             Text("Split")

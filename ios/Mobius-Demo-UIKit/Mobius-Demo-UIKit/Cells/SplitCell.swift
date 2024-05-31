@@ -24,7 +24,7 @@ final class SplitCell: UICollectionViewCell {
     }
     
     private func setupView() {
-        backgroundColor = .secondaryApp
+        backgroundColor = UIColor(named: "secondaryAppColor")!
 
         contentView.addSubview(descr)
 

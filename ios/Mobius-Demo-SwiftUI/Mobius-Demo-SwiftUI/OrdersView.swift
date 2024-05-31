@@ -34,7 +34,7 @@ struct OrdersView: View {
                     }
                 }
             }.animation(.easeInOut, value: viewModel.isLoading)
-        }.background(Color.secondaryApp)
+        }.background(Color("secondaryAppColor", bundle: .main))
     }
 }
 

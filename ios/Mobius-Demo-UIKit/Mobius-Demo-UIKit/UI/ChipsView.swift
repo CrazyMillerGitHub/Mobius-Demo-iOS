@@ -49,8 +49,8 @@ private extension ChipView {
     private struct Constants {
         static let horizontalPadding: CGFloat = 16
         static let verticalPadding: CGFloat = 7
-        static let selectedBackgroundColor: UIColor = .chipsSelected
-        static let deselectedBackgroundColor: UIColor = .chips
+        static let selectedBackgroundColor: UIColor = UIColor(named: "chipsSelectedColor")!
+        static let deselectedBackgroundColor: UIColor = UIColor(named: "chipsColor")!
         static let selectedForegroundColor: UIColor = .white
         static let deselectedForegroundColor: UIColor = .black
         static let cornerRadius: CGFloat = 15
